@@ -12,7 +12,7 @@ export default function Example2() {
     },[])
     
     useEffect(()=>{
-            if(counter>0) console.log(`Button clicked ${counter} tinmes`);
+            if(counter>0) console.log(`Button clicked ${counter} times`);
             
     },[counter])
     //if(counter>0) console.log(`Button clicked ${counter} tinmes`);

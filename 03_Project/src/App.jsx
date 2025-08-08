@@ -1,17 +1,13 @@
 import './App.css'
-import React, { Suspense } from 'react'
+import WithDebounce from './Debounce/WithDebounce'
 
-// Step 1: Lazy import the component
-const LazyComponent = React.lazy(()=>import('./LazyLoading/LazyLoading'))
+import WithoutDebounce from './Debounce/WithoutDebounce'
+import ThrottledScroll from './Throttle/Scroll'
+
 function App() {
  return(
     <>
-      <h1>Welcome</h1>
-       {/* Step 2: Use Suspense to handle loading */}
-       <Suspense fallback={<p>Loading Component </p>} >
-       <LazyComponent/>
-       </Suspense>
-       
+      <ThrottledScroll/>
     </>
  )
 }
